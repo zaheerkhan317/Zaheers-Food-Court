@@ -1,0 +1,537 @@
+<!-- navbar starting -->
+<nav class="navbar navbar-expand-lg sticky-top"  id="main-navbar" style="z-index: 2000;">
+  
+  <div class="container">
+    <div class="navbar-brand">
+  <a href="#" >
+    <img src="./assets/images/logo/logo.png" alt=""style="width:60px; height: 60px;" > 
+    Food <span>Court</span></a>
+    </div>
+
+
+  <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"><i class="fas fa-bars "></i></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li clas="nav-item active">
+        <a class="nav-link" routerLink="/home">
+          HOME</a>
+      </li>
+
+      <li clas="nav-item">
+        <a class="nav-link" routerLink="/speciality">
+          SPECIALITY</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          WE SERVE</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" routerLink="/weserve/tiffins">TIFFINS</a>
+            <a class="dropdown-item" routerLink="/weserve/biryanis">BIRYANIS</a>
+            <a class="dropdown-item" routerLink="/weserve/starters">STARTERS</a>
+            <a class="dropdown-item" routerLink="/weserve/colddrinks">COLD DRINKS</a>
+            <a class="dropdown-item" routerLink="/weserve/pizzas">PIZZAS</a>
+            <a class="dropdown-item" routerLink="/weserve/burgers">BURGERS</a>
+          </div>
+      </li>
+
+      <li clas="nav-item">
+        <a class="nav-link" routerLink="/popular">POPULAR</a>
+      </li>  
+
+      <li clas="nav-item">
+        <a class="nav-link" routerLink="/amenities" >AMENITIES</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/aboutus">ABOUT US</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contactus">CONTACT US</a>
+      </li>
+
+    </ul>
+  
+
+
+  <ul class="nav navbar-nav ml-4">
+    
+    
+   
+    
+    <li class="nav-item">
+        <a routerLink="/cart" class="nav-link" ><i class="fas fa-shopping-cart "></i></a>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-user"></i></a>
+      <div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
+
+        <a class="dropdown-item" href="#" type="button"  data-toggle="modal" data-target="#myModal">Log In</a>
+        <a class="dropdown-item" href="#" type="button"  data-toggle="modal" data-target="#myModal" >Sign Up</a>
+        
+      </div>
+    </li>
+    
+    
+    </ul>
+
+    <ul class="nav navbar-nav ml-6">
+      <li class="nav-item">
+      <form id="demo-2">
+        <input type="search" placeholder="Search">
+      </form>
+      
+    </li>
+
+
+    </ul>
+
+    
+  </div>
+</div>
+</nav>
+
+<div class="modal" id="myModal">
+  <div class="container">
+    <div class="row full-height justify-content-center">
+      <div class="col-12 text-center align-self-center py-5">
+        <div class="section pb-5 pt-5 pt-sm-2 text-center">
+          <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+                <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                <label for="reg-log"></label>
+          <div class="card-3d-wrap mx-auto">
+            <div class="card-3d-wrapper">
+              <div class="card-front" style="background-image: url('././assets/images/signup/index.jpeg');">
+                <div class="center-wrap">
+                  <div class="section text-center">
+                    <h4 class="mb-4 pb-3">Log In</h4>
+                    <div class="form-group">
+                      <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                      <i class="fas fa-at"></i>
+                    </div>	
+                    <div class="form-group mt-2">
+                      <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                      <i class="fas fa-lock"></i>
+                    </div>
+                    <a href="#" class="btn mt-4">submit</a>
+                                  <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
+                      </div>
+                    </div>
+                  </div>
+              <div class="card-back" style="background-image: url('././assets/images/signup/signuplogin.jpg');">
+                <div class="center-wrap">
+                  <div class="section text-center">
+                    <h4 class="mb-4 pb-3">Sign Up</h4>
+                    <div class="form-group">
+                      <input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
+                      <i class="fas fa-user"></i>
+                    </div>	
+                    <div class="form-group mt-2">
+                      <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                      <i class="fas fa-at"></i>
+                    </div>	
+                    <div class="form-group mt-2">
+                      <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                      <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="password" name="logpass" class="form-style" placeholder="Re-Type Your Password" id="logpass" autocomplete="off">
+                      <i class="fas fa-lock"></i>
+                    </div>
+                    
+                    <a href="#" class="btn mt-4">submit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<!-- navbar ending -->
+
+<!-- Starters section starts -->
+
+<section class="popular bg-img" id="popular">
+  <h1 class="heading">Our <span>Starters</span></h1>
+  <br><br>
+  <div class="row">
+    <div class="col-md-4 col-sm-6">
+<div class="product-grid">
+<div class="product-image">
+    <a href="#" class="image">
+        <img class="pic-1" src="./././assets/images/starters/starters1.png">
+    </a>
+    
+</div>
+<div class="product-content">
+    <ul class="rating">
+        <li class="fas fa-star"></li>
+        <li class="fas fa-star"></li>
+        <li class="fas fa-star"></li>
+        <li class="far fa-star"></li>
+        <li class="far fa-star"></li>
+    </ul>
+    <h3 class="title"><a href="#">NOODLES</a></h3>
+    <div class="price"><span>₹90.00</span> ₹79.99</div>
+    <a class="add-to-cart" href="#">add to cart</a>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-4 col-sm-6">
+  <div class="product-grid">
+  <div class="product-image">
+      <a href="#" class="image">
+          <img class="pic-1" src="./././assets/images/starters/starters2.png" >
+      </a>
+  </div>
+  <div class="product-content">
+      <ul class="rating">
+          <li class="fas fa-star"></li>
+          <li class="fas fa-star"></li>
+          <li class="fas fa-star"></li>
+          <li class="fas fa-star"></li>
+          <li class="far fa-star"></li>
+      </ul>
+      <h3 class="title"><a href="#">CHICKEN WINGS</a></h3>
+      <div class="price"><span>₹150.00</span> 99.99</div>
+      <a class="add-to-cart" href="#">add to cart</a>
+  </div>
+  </div>
+  </div>
+
+
+<div class="col-md-4 col-sm-6">
+<div class="product-grid">
+<div class="product-image">
+    <a href="#" class="image">
+        <img class="pic-1" src="./././assets/images/starters/starters3.png" >
+    </a>
+    
+</div>
+<div class="product-content">
+    <ul class="rating">
+        <li class="fas fa-star"></li>
+        <li class="fas fa-star"></li>
+        <li class="fas fa-star"></li>
+        <li class="fas fa-star"></li>
+        <li class="far fa-star"></li>
+    </ul>
+    <h3 class="title"><a href="#">MASALA PASTA</a></h3>
+    <div class="price"><span>₹120.00</span> ₹89.99</div>
+    <a class="add-to-cart" href="#">add to cart</a>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div>
+
+<br><br><br>
+
+<div class="row">
+
+  <div class="col-md-4 col-sm-6">
+    <div class="product-grid">
+    <div class="product-image">
+        <a href="#" class="image">
+            <img class="pic-1" src="./././assets/images/starters/starters4.png">
+        </a>
+    </div>
+    <div class="product-content">
+        <ul class="rating">
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+        </ul>
+        <h3 class="title"><a href="#">CICKEN JOINTS</a></h3>
+        <div class="price"><span>₹160.00</span> ₹99.99</div>
+        <a class="add-to-cart" href="#">add to cart</a>
+    </div>
+    </div>
+    </div>
+
+
+
+    <div class="col-md-4 col-sm-6">
+      <div class="product-grid">
+      <div class="product-image">
+          <a href="#" class="image">
+              <img class="pic-1" src="./././assets/images/starters/starters5.png">
+          </a>
+          
+      </div>
+      <div class="product-content">
+          <ul class="rating">
+              <li class="fas fa-star"></li>
+              <li class="fas fa-star"></li>
+              <li class="fas fa-star"></li>
+              <li class="fas fa-star"></li>
+              <li class="far fa-star"></li>
+          </ul>
+          <h3 class="title"><a href="#">CHICKEN PAKODI</a></h3>
+          <div class="price"><span>₹99.00</span> ₹79.99</div>
+          <a class="add-to-cart" href="#">add to cart</a>
+      </div>
+      </div>
+      </div>
+
+
+
+      <div class="col-md-4 col-sm-6">
+        <div class="product-grid">
+        <div class="product-image">
+            <a href="#" class="image">
+                <img class="pic-1" src="./././assets/images/starters/starters6.jpeg">
+            </a>
+        </div>
+        <div class="product-content">
+            <ul class="rating">
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+                <li class="far fa-star"></li>
+                <li class="far fa-star"></li>
+            </ul>
+            <h3 class="title"><a href="#">SWEET CORN SOUP</a></h3>
+            <div class="price"><span>₹120.00</span> ₹79.99</div>
+            <a class="add-to-cart" href="#">add to cart</a>
+        </div>
+        </div>
+        </div>
+
+</div>
+<br><br><br>
+<div class="row">
+
+  <div class="col-md-4 col-sm-6">
+    <div class="product-grid">
+    <div class="product-image">
+        <a href="#" class="image">
+            <img class="pic-1" src="./././assets/images/starters/starters7.png">
+        </a>
+    </div>
+    <div class="product-content">
+        <ul class="rating">
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="far fa-star"></li>
+            <li class="far fa-star"></li>
+        </ul>
+        <h3 class="title"><a href="#">CHEESE PASTA</a></h3>
+        <div class="price"><span>₹79.00</span> ₹49.99</div>
+        <a class="add-to-cart" href="#">add to cart</a>
+    </div>
+    </div>
+    </div>
+
+
+
+    <div class="col-md-4 col-sm-6">
+      <div class="product-grid">
+      <div class="product-image">
+          <a href="#" class="image">
+              <img class="pic-1" src="./././assets/images/starters/starters8.png">
+          </a>
+          
+      </div>
+      <div class="product-content">
+          <ul class="rating">
+              <li class="fas fa-star"></li>
+              <li class="fas fa-star"></li>
+              <li class="fas fa-star"></li>
+              <li class="fas fa-star"></li>
+              <li class="far fa-star"></li>
+          </ul>
+          <h3 class="title"><a href="#">SAMOSA</a></h3>
+          <div class="price"><span>₹39.00</span> ₹19.99</div>
+          <a class="add-to-cart" href="#">add to cart</a>
+      </div>
+      </div>
+      </div>
+
+
+
+      <div class="col-md-4 col-sm-6">
+        <div class="product-grid">
+        <div class="product-image">
+            <a href="#" class="image">
+                <img class="pic-1" src="./././assets/images/starters/starters9.png">
+            </a>
+        </div>
+        <div class="product-content">
+            <ul class="rating">
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+                <li class="far fa-star"></li>
+            </ul>
+            <h3 class="title"><a href="#">CHICKEN 65</a></h3>
+            <div class="price"><span>₹169.00</span> ₹129.99</div>
+            <a class="add-to-cart" href="#">add to cart</a>
+        </div>
+        </div>
+        </div>
+
+</div>
+
+<br><br><br>
+<div class="row">
+
+  <div class="col-md-4 col-sm-6">
+    <div class="product-grid">
+    <div class="product-image">
+        <a href="#" class="image">
+            <img class="pic-1" src="./././assets/images/starters/starters10.png">
+        </a>
+    </div>
+    <div class="product-content">
+        <ul class="rating">
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="far fa-star"></li>
+            <li class="far fa-star"></li>
+        </ul>
+        <h3 class="title"><a href="#">MASALA PANEER</a></h3>
+        <div class="price"><span>₹80.00</span> ₹49.99</div>
+        <a class="add-to-cart" href="#">add to cart</a>
+    </div>
+    </div>
+    </div>
+
+
+
+    <div class="col-md-4 col-sm-6">
+      <div class="product-grid">
+      <div class="product-image">
+          <a href="#" class="image">
+              <img class="pic-1" src="./././assets/images/starters/starters11.png">
+          </a>
+          
+      </div>
+      <div class="product-content">
+          <ul class="rating">
+              <li class="fas fa-star"></li>
+              <li class="fas fa-star"></li>
+              <li class="fas fa-star"></li>
+              <li class="fas fa-star"></li>
+              <li class="far fa-star"></li>
+          </ul>
+          <h3 class="title"><a href="#">CHICKEN LOLLIPOPS</a></h3>
+          <div class="price"><span>₹150.00</span> ₹119.99</div>
+          <a class="add-to-cart" href="#">add to cart</a>
+      </div>
+      </div>
+      </div>
+
+
+
+      <div class="col-md-4 col-sm-6">
+        <div class="product-grid">
+        <div class="product-image">
+            <a href="#" class="image">
+                <img class="pic-1" src="./././assets/images/starters/starters12.png">
+            </a>
+        </div>
+        <div class="product-content">
+            <ul class="rating">
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+                <li class="far fa-star"></li>
+                <li class="far fa-star"></li>
+            </ul>
+            <h3 class="title"><a href="#">BREAD OMELETTE</a></h3>
+            <div class="price"><span>₹120.00</span> ₹79.99</div>
+            <a class="add-to-cart" href="#">add to cart</a>
+        </div>
+        </div>
+        </div>
+
+      </div>
+<br><br><br>
+ </section> 
+<!-- Starters section ends -->
+  
+  
+
+
+<!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-12 py-5">
+          <div class="mb-6 flex-center">
+  
+            <!-- Facebook -->
+            <a class="fb-ic" href="">
+              <i class="fab fa-facebook-f fa-lg white-text mr-md-8 mr-5 fa-2x"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic" href="" >
+              <i class="fab fa-twitter fa-lg white-text mr-md-8 mr-5 fa-2x"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic" href="">
+              <i class="fab fa-google-plus-g fa-lg white-text mr-md-8 mr-5 fa-2x"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic" href="">
+              <i class="fab fa-linkedin-in fa-lg white-text mr-md-8 mr-5 fa-2x"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic" href="">
+              <i class="fab fa-instagram fa-lg white-text mr-md-8 mr-5 fa-2x"> </i>
+            </a>
+            <!--Pinterest-->
+            <a class="pin-ic" href="">
+              <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">
+    <h1 class="credit "> Created by 
+      <a ngbPopover="               My Portfolio 
+      https://zaheerkhan317.github.io/zaheer-portfolio/" triggers="mouseenter" [closeDelay]="9000" placement="top" href="https://zaheerkhan317.github.io/zaheer-portfolio/">
+        <span> Gouse Jaheer</span></a> | All Rights Reserved!
+      <br> <br> © 2021 Copyright</h1>
+  </div>
+  <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->

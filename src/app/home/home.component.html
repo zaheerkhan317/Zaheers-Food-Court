@@ -1,0 +1,838 @@
+<body style="background: url(././assets/images/biryanipics/biryanicover.jpg) top center;
+background-size: cover;
+width: 100%;
+height: 100vh;">
+
+<!-- navbar starting -->
+<nav class="navbar navbar-expand-lg" (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'nofixed'" id="navbar" style="z-index: 2000;">
+  
+  <div class="container">
+    <div class="navbar-brand">
+  <a href="#" >
+    <img src="./assets/images/logo/logo.png" alt=""style="width:60px; height: 60px;" > 
+    Food <span>Court</span></a>
+    </div>
+
+
+  <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"><i class="fas fa-bars "></i></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li clas="nav-item active">
+        <a class="nav-link" routerLink="/home">
+          HOME</a>
+      </li>
+
+      <li clas="nav-item">
+        <a class="nav-link" routerLink="/speciality">
+          SPECIALITY</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          WE SERVE</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" routerLink="/weserve/tiffins">TIFFINS</a>
+            <a class="dropdown-item" routerLink="/weserve/biryanis">BIRYANIS</a>
+            <a class="dropdown-item" routerLink="/weserve/starters">STARTERS</a>
+            <a class="dropdown-item" routerLink="/weserve/colddrinks">COLD DRINKS</a>
+            <a class="dropdown-item" routerLink="/weserve/pizzas">PIZZAS</a>
+            <a class="dropdown-item" routerLink="/weserve/burgers">BURGERS</a>
+          </div>
+      </li>
+
+      <li clas="nav-item">
+        <a class="nav-link" routerLink="/popular">POPULAR</a>
+      </li>  
+
+      <li clas="nav-item">
+        <a class="nav-link" routerLink="/amenities" >AMENITIES</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/aboutus">ABOUT US</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contactus">CONTACT US</a>
+      </li>
+
+    </ul>
+  
+
+
+  <ul class="nav navbar-nav ml-4">
+    
+    
+   
+    
+    <li class="nav-item">
+        <a routerLink="/cart" class="nav-link" ><i class="fas fa-shopping-cart "></i></a>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-user"></i></a>
+      <div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
+
+        <a class="dropdown-item" href="#" type="button"  data-toggle="modal" data-target="#myModal">Log In</a>
+        <a class="dropdown-item" href="#" type="button"  data-toggle="modal" data-target="#myModal" >Sign Up</a>
+        
+      </div>
+    </li>
+
+    <li>
+
+    </li>
+    <li></li>
+    
+    
+    </ul>
+
+    <ul class="nav navbar-nav ml-6">
+      <li class="nav-item">
+      <form id="demo-2">
+        <input type="search" placeholder="Search">
+      </form>
+      
+    </li>
+
+
+    </ul>
+
+    
+  </div>
+</div>
+</nav>
+
+<div class="modal" id="myModal">
+  <div class="container">
+    <div class="row full-height justify-content-center">
+      <div class="col-12 text-center align-self-center py-5">
+        <div class="section pb-5 pt-5 pt-sm-2 text-center">
+          <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+                <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                <label for="reg-log"></label>
+          <div class="card-3d-wrap mx-auto">
+            <div class="card-3d-wrapper">
+              <div class="card-front" style="background-image: url('././assets/images/signup/index.jpeg');">
+                <div class="center-wrap">
+                  <div class="section text-center">
+                    <h4 class="mb-4 pb-3">Log In</h4>
+                    <div class="form-group">
+                      <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                      <i class="fas fa-at"></i>
+                    </div>	
+                    <div class="form-group mt-2">
+                      <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                      <i class="fas fa-lock"></i>
+                    </div>
+                    <a href="#" class="btn mt-4">submit</a>
+                                  <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
+                      </div>
+                    </div>
+                  </div>
+              <div class="card-back" style="background-image: url('././assets/images/signup/signuplogin.jpg');">
+                <div class="center-wrap">
+                  <div class="section text-center">
+                    <h4 class="mb-4 pb-3">Sign Up</h4>
+                    <div class="form-group">
+                      <input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
+                      <i class="fas fa-user"></i>
+                    </div>	
+                    <div class="form-group mt-2">
+                      <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                      <i class="fas fa-at"></i>
+                    </div>	
+                    <div class="form-group mt-2">
+                      <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                      <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="password" name="logpass" class="form-style" placeholder="Re-Type Your Password" id="logpass" autocomplete="off">
+                      <i class="fas fa-lock"></i>
+                    </div>
+                    
+                    <a href="#" class="btn mt-4">submit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<!-- navbar ending -->
+
+
+
+<!-- scroll up button -->
+
+<!---Main Section-->
+<section id="hero">
+    <div class="hero-container">
+        <h3 class="font-weight-bold">Relish The Most Tempting</h3>
+        <div class="hero-logo">
+            <h1 class="font-weight-bold " >Delicacies With Us!</h1>
+        </div>
+        <div class="actions">
+            <a href="#"class="button btn1"><span>Menu</span></a>
+            <a href="#"class="button btn1"><span>Order Online</span></a>
+            <a href="#"class="button btn1"><span>Book a Table</span></a>
+        </div>
+    </div>
+</section>
+<!---End of main Section-->
+  
+</body>
+<br><br><br><br>
+
+
+
+<!--Category Section----->
+
+
+    <h2 class="text-center font-weight-bold" style="text-decoration: underline;">Categories</h2>
+    <br>
+    <section id="variety" class="variety pt-4">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="cards-wrapper">
+                <div class="card">
+                  <img src="./assets/images/categories/category starters.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">STARTERS</h5>
+                    <p class="card-text">A starters is a small portion of food generally eaten before meals.</p>
+                    <a routerLink="/weserve/starters" class="btn btn-warning">BUY</a>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img src="./assets/images/categories/category pizza.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">PIZZAS</h5>
+                    <p class="card-text">Pizza is sold fresh or frozen, and whole or in portion-size slices.</p>
+                    <a href="#" class="btn btn-warning">BUY</a>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img src="./assets/images/categories/category dosa.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">DOSA</h5>
+                    <p class="card-text">Dosa can be stuffed with fillings of vegetables and sauces to make a quick meal. </p>
+                    <a routerLink="/weserve/tiffins" class="btn btn-warning">BUY</a>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                    <img src="./assets/images/categories/category cold drink.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">SOFT DRINKS</h5>
+                      <p class="card-text">Soft drinks are water-based flavoured drinks that are sweetened and carbonated.</p>
+                      <a routerLink="/weserve/colddrinks" class="btn btn-warning">BUY</a>
+                    </div>
+                  </div>
+              </div>
+              </div>
+              <div class="carousel-item">
+                <div class="cards-wrapper">
+                  <div class="card">
+                    <img src="./assets/images/categories/category burger.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">BURGERS</h5>
+                      <p class="card-text"> A sandwich consisting of one or more cooked patties, placed inside a sliced bread roll or bun.</p>
+                      <a routerLink="/weserve/burgers" class="btn btn-warning">BUY</a>
+                    </div>
+                  </div>
+                  <div class="card d-none d-md-block">
+                    <img src="./assets/images/categories/category biryani.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">BIRYANIS</h5>
+                      <p class="card-text">It is made with Indian spices, rice, and meat usually that of chicken, goat,  prawn and fish.</p>
+                      <a routerLink="/weserve/biryanis" class="btn btn-warning">BUY</a>
+                    </div>
+                  </div>
+                  <div class="card d-none d-md-block">
+                    <img src="./assets/images/categories/category sandwich.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">SANDWICH</h5>
+                      <p class="card-text">A sandwich is a food typically consisting of vegetables, sliced cheese or meat, placed on bread.</p>
+                      <a routerLink="/weserve/starters" class="btn btn-warning">BUY</a>
+                    </div>
+                  </div>
+                  
+                  <div class="card d-none d-md-block ">
+                    <img src="./assets/images/categories/category mcdonalds.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">MC DONALDS</h5>
+                      <p class="card-text">McDonald's is an American fast food and it serves hamburgers, cheeseburgers and french fries.</p>
+                      <a routerLink="/weserve/starters" class="btn btn-warning">BUY</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <a class="carousel-control-prev bg-dark" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next bg-dark" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+<br><br><br>
+<!---End of Category Section-->
+
+
+<!--Deals Section-->
+
+
+<section class="product-section bg-img py-3">
+  <br><br><br>
+  <h2 class="text-center font-weight-bold">Our Deals</h2>
+  <br><br><br>
+    <div class="row pb-5 mb-4">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0" data-label="70% off">
+            <div class="card-body p-4"><img src="././assets/images/burgers/burger3.png" alt="" class="img-fluid d-block mx-auto mb-3">
+              <h5> <a routerLink="/weserve/burgers" class="text-dark">CHICKEN BURGER</a></h5>
+              <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <ul class="list-inline small">
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0"data-label="60% off" >
+            <div class="card-body p-4"><img src="././assets/images/mcdonalds/mcdonalds4.png" alt="" class="img-fluid d-block mx-auto mb-3">
+              <h5> <a routerLink="/weserve/starters" class="text-dark">MC DONALDS CHICKEN</a></h5>
+              <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <ul class="list-inline small">
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0" data-label="40% off">
+            <div class="card-body p-4"><img src="././assets/images/sandwich/sandwich4.png" alt="" class="img-fluid d-block mx-auto mb-3">
+              <h5> <a routerLink="/weserve/starters" class="text-dark">SANDWICH</a></h5>
+              <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <ul class="list-inline small">
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0"data-label="50% off" >
+            <div class="card-body p-4"><img src="././assets/images/biryanipics/biryani7.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+              <h5> <a routerLink="/weserve/biryanis" class="text-dark">KALYANI BIRYANI</a></h5>
+              <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <ul class="list-inline small">
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pb-5 mb-4">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0"data-label="60% off" >
+            <div class="card-body p-4"><img src="././assets/images/starters/starters4.png" alt="" class="img-fluid d-block mx-auto mb-3">
+              <h5> <a routerLink="/weserve/starters" class="text-dark">CHICKEN JOINTS</a></h5>
+              <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <ul class="list-inline small">
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0" data-label="40% off">
+            <div class="card-body p-4"><img src="././assets/images/tiffins/tiffins4.png" alt="" class="img-fluid d-block mx-auto mb-3">
+              <h5> <a routerLink="/weserve/tiffins" class="text-dark">FULL PLATE</a></h5>
+              <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <ul class="list-inline small">
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0" data-label="20% off">
+            <div class="card-body p-4"><img src="././assets/images/colddrinks/cold drink4.png" alt="" class="img-fluid d-block mx-auto mb-3">
+              <h5> <a routerLink="/weserve/colddrinks" class="text-dark">TOMATO JUICE</a></h5>
+              <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <ul class="list-inline small">
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0" data-label="10% off">
+            <div class="card-body p-4"><img src="././assets/images/biryanipics/biryani9.png" alt="" class="img-fluid d-block mx-auto mb-3">
+              <h5> <a routerLink="/weserve/biryanis" class="text-dark">KHEEMA BIRYANI</a></h5>
+              <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <ul class="list-inline small">
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pb-5 mb-4">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0" data-label="40% off">
+            <div class="card-body p-4"><img src="././assets/images/pizzas/pizza4.png" alt="" class="img-fluid d-block mx-auto mb-3">
+              <h5> <a routerLink="/weserve/pizzas" class="text-dark">MUSHROOM CHEESE PIZZA</a></h5>
+              <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <ul class="list-inline small">
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0" data-label="40% off">
+            <div class="card-body p-4"><img src="././assets/images/starters/starters6.jpeg" alt="" class="img-fluid d-block mx-auto mb-3">
+              <h5> <a routerLink="/weserve/starters" class="text-dark">SWEET CORN SOUP</a></h5>
+              <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <ul class="list-inline small">
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0"data-label="60% off" >
+            <div class="card-body p-4"><img src="././assets/images/burgers/burger6.png" alt="" class="img-fluid d-block mx-auto mb-3">
+              <h5> <a routerLink="/weserve/burgers" class="text-dark">BURGER PRIEST</a></h5>
+              <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <ul class="list-inline small">
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0" data-label="30% off">
+            <div class="card-body p-4"><img src="././assets/images/colddrinks/cold drink6.png" alt="" class="img-fluid d-block mx-auto mb-3">
+              <h5> <a routerLink="/weserve/colddrinks" class="text-dark">LEMON SODA</a></h5>
+              <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <ul class="list-inline small">
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+            
+</section>
+<!--End of Deals Section-->
+
+<!-- gallery section starts  -->
+
+<section class="gallery" id="gallery">
+  <br><br><br>
+    <h2 class="text-center font-weight-bold">Our Food Gallery</h2>
+    <br><br><br>
+    <div class="box-container">
+  
+        <div class="box">
+            <img src="././assets/images/biryanipics/biryanicover.jpg" alt="">
+            <div class="content">
+                <h3>Tasty Food</h3>
+                <p>Biryani</p>
+                <a routerLink="/weserve/biryanis" class="btn">Order Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="././assets/images/burgers/burger13.jpg" alt="">
+            <div class="content">
+                <h3>Tasty Food</h3>
+                <p>Burger</p>
+                <a routerLink="/weserve/burgers" class="btn">Order Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="././assets/images/mcdonalds/mcdonalds3.png" alt="">
+            <div class="content">
+                <h3>Tasty Food</h3>
+                <p>MC Donalds</p>
+                <a routerLink="/weserve/starters" class="btn">Order Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="././assets/images/pizzas/pizza2.png" alt="">
+            <div class="content">
+                <h3>Tasty Food</h3>
+                <p>Pizza</p>
+                <a routerLink="/weserve/pizzas" class="btn">Order Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="././assets/images/sandwich/sandwich 13.jpg" alt="">
+            <div class="content">
+                <h3>Tasty Food</h3>
+                <p>Sandwich</p>
+                <a routerLink="/weserve/starters" class="btn">Order Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="././assets/images/starters/starters10.png" alt="">
+            <div class="content">
+                <h3>Tasty Food</h3>
+                <p>Starters</p>
+                <a routerLink="/weserve/starters" class="btn">Order Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="././assets/images/sweets/sweet.png" alt="">
+            <div class="content">
+                <h3>Tasty Food</h3>
+                <p>Sweets</p>
+                <a routerLink="/weserve/starters" class="btn">Order Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="././assets/images/tiffins/tiffins11.png" alt="">
+            <div class="content">
+                <h3>Tasty Food</h3>
+                <p>Tiffins</p>
+                <a routerLink="/weserve/tiffins" class="btn">Order Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="././assets/images/categories/category dosa.jpg" alt="">
+            <div class="content">
+                <h3>Tasty Food</h3>
+                <p>Dosa</p>
+                <a routerLink="/weserve/tiffins" class="btn">Order Now</a>
+            </div>
+        </div>
+  
+    </div>
+  
+  </section>
+  
+  <!-- gallery section ends -->
+
+  <br><br><br><br>
+<!---Team Section-->
+<section class="chef my-5 bg-img" id="chef">
+  <div class="container">
+    <br><br>
+      <h2 class="text-center">
+         Our Master Chef
+      </h2>
+
+      <br><br><br><br>
+      <div class="row">
+          <div class="col-sm-4 col-xs-3">
+              <div class="card card-block">
+                  <a href="#">
+                      <img src="././assets/images/chef/chef1.png"class="chef-img" alt="">
+                      <div class="card-title-wrap">
+                          <span class="card-title">
+                              Racheal
+                          </span>
+                          <span class="card-text">Senior Chef</span>
+                      </div>
+                      <div class="chef-over">
+                          <h4 class="hidden-md-down">
+                              Connect with Me
+                          </h4>
+                          <nav class="social-nav">
+                              <a href="#">
+                                  <i class="fab fa-twitter"></i>
+                              </a>
+                              <a href="#">
+                                  <i class="fab fa-facebook"></i>
+                              </a>
+                              <a href="#">
+                                  <i class="fab fa-linkedin"></i>
+                              </a>
+
+                          </nav>
+                          <p>Lorem ipsum dolor sit amet.</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+          <!---->
+          <div class="col-sm-4 col-xs-3">
+              <div class="card card-block">
+                  <a href="#">
+                      <img src="././assets/images/chef/chef2.png"class="chef-img" alt="">
+                      <div class="card-title-wrap">
+                          <span class="card-title">
+                              Jordan
+                          </span>
+                          <span class="card-text">Senior Chef</span>
+                      </div>
+                      <div class="chef-over">
+                          <h4 class="hidden-md-down">
+                              Connect with Me
+                          </h4>
+                          <nav class="social-nav">
+                              <a href="#">
+                                  <i class="fab fa-twitter"></i>
+                              </a>
+                              <a href="#">
+                                  <i class="fab fa-facebook"></i>
+                              </a>
+                              <a href="#">
+                                  <i class="fab fa-linkedin"></i>
+                              </a>
+
+                          </nav>
+                          <p>Lorem ipsum dolor sit amet.</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+          <!---->
+          <div class="col-sm-4 col-xs-3">
+              <div class="card card-block">
+                  <a href="#">
+                      <img src="././assets/images/chef/chef3.png"  alt="" height="150px" width="200px">
+                      <div class="card-title-wrap">
+                          <span class="card-title">
+                              Mike
+                          </span>
+                          <span class="card-text">Senior Chef</span>
+                      </div>
+                      <div class="chef-over">
+                          <h4 class="hidden-md-down">
+                              Connect with Me
+                          </h4>
+                          <nav class="social-nav">
+                              <a href="#">
+                                  <i class="fab fa-twitter"></i>
+                              </a>
+                              <a href="#">
+                                  <i class="fab fa-facebook"></i>
+                              </a>
+                              <a href="#">
+                                  <i class="fab fa-linkedin"></i>
+                              </a>
+
+                          </nav>
+                          <p>Lorem ipsum dolor sit amet.</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <br><br><br><br>
+</section>
+
+
+<!--- End of Team Section-->
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+  <br><br><br>
+    <h2 class="text-center font-weight-bold">Customer Reviews</h2>
+    <br><br><br>
+    <br><br><br>
+
+  <div class="box-container">
+
+      <div class="box">
+          <img src="././assets/images/customer review/pic1.png" alt="">
+          <h3>Scarlett Johnson</h3>
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+          </div>
+          <p>Food Court has great pizza, the best! I am picky about my pizza. Their pies are huge, not two much sauce and a great mixture of cheeses.</p>
+      </div>
+      <div class="box">
+          <img src="././assets/images/customer review/pic2.png" alt="">
+          <h3>George</h3>
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+          </div>
+          <p>This place knows how to satisfy their clients. Always with a super nice mindset. The food is affordably priced, always delicious and clean.</p>
+      </div>
+      <div class="box">
+          <img src="././assets/images/customer review/pic3.png" alt="">
+          <h3>Chan Yun</h3>
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+          </div>
+          <p>Group of six of us for a late dinner. Plenty of menu options and service was very good. Food was delicious and we were happy to have leftovers to take home.</p>
+      </div>
+
+  </div>
+
+</section>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<!-- review section ends -->
+
+<!-- footer section -->
+<!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+        <div class="mb-6 flex-center">
+
+          <!-- Facebook -->
+          <a class="fb-ic" href="">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-8 mr-5 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic" href="" >
+            <i class="fab fa-twitter fa-lg white-text mr-md-8 mr-5 fa-2x"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic" href="">
+            <i class="fab fa-google-plus-g fa-lg white-text mr-md-8 mr-5 fa-2x"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic" href="">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-8 mr-5 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic" href="">
+            <i class="fab fa-instagram fa-lg white-text mr-md-8 mr-5 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic" href="">
+            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+  
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">
+    <h1 class="credit "> Created by 
+      <a ngbPopover="               My Portfolio 
+      https://zaheerkhan317.github.io/zaheer-portfolio/" triggers="mouseenter" [closeDelay]="9000" placement="top" href="https://zaheerkhan317.github.io/zaheer-portfolio/">
+        <span> Gouse Jaheer</span></a> | All Rights Reserved!
+      <br> <br> © 2021 Copyright</h1>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+<!-- <app-home></app-home>
+<app-aboutus></app-aboutus>
+<app-contactus></app-contactus>
+<app-amenities></app-amenities>
+<app-popular></app-popular>
+<app-speciality></app-speciality>
+<app-weserve></app-weserve> -->
+<!---End of Variety-->
+<app-scrolltop></app-scrolltop>
